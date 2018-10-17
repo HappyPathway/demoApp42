@@ -29,3 +29,26 @@ module "public_service" {
   service_version = "1.0.0"
   vpc_id = "${module.network.vpc_id}"
 }
+
+output "public_dns" {
+  module "${module.public_service.public_dns}"
+}
+  
+output "admin_sgs" {
+  module = "${module.network.admin_sgs}" 
+  }
+output "key_name" {
+  module = "${module.network.key_name}" 
+ }
+output "private_subnets" {
+  module = "${module.network.private_subnets}"
+  }
+output "public_subnets" {
+  module = "${module.network.public_subnets}"
+  }
+output "region" {
+  module = "${module.network.region}"
+  }
+output "vpc_id" {
+  module = "${module.network.vpc_id}"
+  }
