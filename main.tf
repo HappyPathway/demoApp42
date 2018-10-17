@@ -20,7 +20,7 @@ module "public_service" {
   version = "1.0.1"
 
   env = "${var.env}"
-  instance_type = "m4.large"
+  instance_type = "t2.micro"
   key_name = "${module.network.key_name}"
   private_subnet_id = "${element(module.network.private_subnets, 0)}"
   public_subnet_id = "${element(module.network.public_subnets, 0)}"
