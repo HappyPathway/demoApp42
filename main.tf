@@ -17,7 +17,7 @@ module "network" {
 
 module "public_service" {
   source  = "app.terraform.io/AWSTFEDemos/public-service/aws"
-  version = "1.0.1"
+  version = "1.2.0"
 
   env = "${var.env}"
   instance_type = "m4.large"
