@@ -2,7 +2,7 @@
 // Variables
 
 variable "env" {}
-
+variable "service_version" {}
 //--------------------------------------------------------------------
 // Modules
 module "network" {
@@ -26,7 +26,7 @@ module "public_service" {
   public_subnet_id = "${element(module.network.public_subnets, 0)}"
   service_healthcheck = "add/1/1"
   service_name = "simple-app"
-  service_version = "1.0.0"
+  service_version = "${var.service_version}"
   service_port = 8000
   vpc_id = "${module.network.vpc_id}"
 }
