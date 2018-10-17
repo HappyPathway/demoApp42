@@ -9,7 +9,7 @@ module "network" {
   source  = "app.terraform.io/AWSTFEDemos/network/aws"
   version = "3.0.8"
 
-  availability_zones = "us-east-1a"
+  availability_zones = ["us-east-1a"]
   key_name = "tfe-demos-darnold"
   network_name = "${var.env}"
   region = "us-east-1"
