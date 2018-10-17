@@ -27,6 +27,7 @@ module "public_service" {
   service_healthcheck = "add/1/1"
   service_name = "simple-app"
   service_version = "1.0.0"
+  service_port = 8000
   vpc_id = "${module.network.vpc_id}"
 }
 
